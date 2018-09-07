@@ -1,3 +1,26 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 1s ease-out; }
+  .menu-btn .btn-line {
+    width: 32px;
+    height: 3px;
+    margin: 0 0 6px 0;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: all 1s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(4px, -5px); }
+
 * {
   box-sizing: border-box; }
 
@@ -5,8 +28,7 @@ body {
   color: #fff;
   margin: 0;
   height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
   body#bg-img {
     background-image: url("/dist/assets/img/background.jpg");
     background-position: center;

@@ -1,0 +1,34 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  @include easeOut(1s);
+
+  .btn-line {
+    width: 32px;
+    height: 3px;
+    margin: 0 0 6px 0;
+    border-radius: 5px;
+    background-color: $primary-color;
+    @include easeOut(1s);
+    
+  }
+
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -5px);
+      }
+    }
+  }
+}
