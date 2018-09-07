@@ -1,0 +1,11 @@
+$main-background-color: #333;
+$main-color: #fff;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $main-background-color;
+  color: $main-color;
+}
