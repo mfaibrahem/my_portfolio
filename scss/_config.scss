@@ -1,9 +1,9 @@
-$primary-background-color: hsl(180, 70%, 40%);
-$primary-color: #fff;
-$secondary-color: hsla(60, 100%, 50%, 0.925);
+$primary-background-color: #333;
+$primary-color: #eee;
+$secondary-color: rgba(0, 151, 255, 0.925); 
 $show-home-img: true;
 $home-img: url("/dist/assets/img/background.jpg");
-$background-opacity: .8;
+$background-opacity: .6;
 
 
 @mixin background() {
@@ -54,5 +54,28 @@ $background-opacity: .8;
     100% {
       transform: scale(1);
     }
+  }
+}
+
+
+// media queries
+@mixin mediaExSm {
+  @media only screen and(min-width: 480px) {
+    @content;
+  }
+}
+@mixin mediaSm {
+  @media only screen and(min-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media only screen and(min-width: 992px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media only screen and(min-width: 1200px) {
+    @content;
   }
 }

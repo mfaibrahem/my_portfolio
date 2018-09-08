@@ -32,3 +32,86 @@
     }
   }
 }
+
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: $background-opacity + .3;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  @include easeOut(1s);
+
+
+  &.show {
+    visibility: visible;
+  }
+
+  .menu-branding,
+  .menu-nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .menu-nav {
+    flex: 2;
+    background-color: darken($primary-background-color, 4%);
+    transform: translateY(100%);
+    @include easeOut(.5s);
+  
+    &.show {
+      transform: translateY(0);
+    }
+
+    .nav-item {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      transform: translateX(200%);
+      @include easeOut(.4s);
+      &.show {
+        transform: translateX(0);
+      }
+      a {
+        display: block;
+        &:hover {
+          color: $secondary-color;
+          @include heartAnimation(1s);
+        }
+      }
+    }
+  }
+  .menu-branding {
+    flex: 1;
+    background-color: darken($primary-background-color, 9%);
+    transform: translateY(-100%);
+    @include easeOut(.8s);
+    &.show {
+      transform: translateY(0);
+    }
+    .portrait {
+      width: 180px;
+      height: 180px;
+      background-image: url('../assets/img/portrait.png');
+      background-position: center;
+      background-size: cover;
+      border-radius: 50%;
+      border: 1px solid $secondary-color;
+    }
+  }
+}
+
+// delay each nav menu item
+
+@for $i from 1 through 4 {
+  .menu-nav .nav-item:nth-child(#{$i}) {
+    transition-delay: $i * .2s;
+  }
+}

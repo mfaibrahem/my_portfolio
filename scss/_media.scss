@@ -1,0 +1,137 @@
+// Extra Small devices minWidth 480px
+
+@include mediaExSm {
+
+  h1, h2, h3 {
+    font-weight: 200;
+    &.lg-heading {
+      font-size: 3rem;
+    }
+  }
+
+  .menu {
+    .menu-nav {
+      flex: 1.7;
+    }
+   
+    .menu-branding {
+      flex: 1;
+      .portrait {
+        width: 220px;
+        height: 220px;
+      }
+    }
+  }
+
+
+  main {
+    padding: 2rem;
+    min-height: 100vh;
+    
+    &#home {
+      h1 {
+        margin-top: 15vh;
+      }
+    }
+  }
+}
+
+
+// small devices minWidth 768px
+@include mediaSm {
+  h1, h2, h3 {
+    font-weight: 200;
+
+    &.lg-heading {
+      font-size: 4.5rem;
+    }
+  }
+
+  .menu {
+    flex-direction: row;
+  
+    .menu-nav {
+      flex: 1.5;
+      transform: translateY(-100%);
+  
+      .nav-item {
+        margin-bottom: 2rem;
+        font-size: 2rem;  
+      }
+    }
+    .menu-branding {
+      flex: 1;
+      transform: translateY(100%);
+      .portrait {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+
+  main {
+    padding: 3.5rem;
+    &#home {
+
+      h1 {
+        margin-top: 20vh;
+      }
+    }
+  }
+}
+
+
+// Medium devices minWidth 992px
+
+@include mediaMd {
+  h1, h2, h3 {
+
+    &.lg-heading {
+      font-size: 6rem;
+    }
+  }
+  
+  main {
+    padding: 4rem;
+
+    &#home {
+
+      h1 {
+        margin-top: 22vh;
+      }
+    }
+  }
+
+  .menu {
+    .menu-branding {
+      flex: 1;
+    }
+    .menu-nav {
+      flex: 1.25;
+    }
+  }
+}
+
+
+// Large devices minWidth 1200px
+
+@include mediaLg {
+  h1, h2, h3 {
+
+    &.lg-heading {
+      font-size: 7rem;
+    }
+  }
+  main {
+    padding: 4.5rem;
+  }
+
+  .menu {
+    .menu-branding {
+      flex: 1;
+    }
+    .menu-nav {
+      flex: 1.3;
+    }
+  }
+}
