@@ -10,7 +10,7 @@
     height: 3px;
     margin: 0 0 6px 0;
     border-radius: 5px;
-    background-color: #eee;
+    background-color: #fff;
     transition: all 1s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -110,7 +110,7 @@
   box-sizing: border-box; }
 
 body {
-  color: #eee;
+  color: #fff;
   margin: 0;
   height: 100%;
   background-color: #333;
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5 {
     background-color: rgba(56, 56, 56, 0.5); }
 
 a {
-  color: #eee;
+  color: #fff;
   text-decoration: none; }
 
 header {
@@ -230,6 +230,82 @@ main {
     line-height: 1.6;
     font-weight: 200; }
 
+.projects {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 1fr; }
+  .projects a {
+    display: block; }
+  .projects img {
+    width: 100%; }
+  .projects .item {
+    width: 80%;
+    margin: auto; }
+    .projects .item a {
+      box-shadow: 1px 2px 12px #292929;
+      position: relative; }
+      .projects .item a .overlay {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 0;
+        background-color: #292929;
+        overflow: hidden;
+        padding: 0 1.2rem;
+        opacity: .8;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        transition: all 0.6s ease-out; }
+        .projects .item a .overlay .tags {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-bottom: 1rem; }
+          .projects .item a .overlay .tags div {
+            font-size: .9rem;
+            padding: .4rem .9rem;
+            background-color: black;
+            margin: 0 1rem 1rem 0;
+            border-radius: 2rem;
+            border: 1px solid rgba(0, 151, 255, 0.925);
+            cursor: text; }
+      .projects .item a:hover .overlay {
+        height: 100%;
+        padding: 1rem 1.2rem; }
+    .projects .item .project-icons {
+      font-family: 'Muli', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; }
+      .projects .item .project-icons a {
+        flex: 1;
+        padding: .5rem 1.5rem;
+        letter-spacing: 2px;
+        border-left: 0.7rem solid rgba(0, 151, 255, 0.925);
+        background-color: black; }
+        .projects .item .project-icons a:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 0;
+          background-color: #363636;
+          opacity: .3;
+          transition: all 0.4s ease-out; }
+        .projects .item .project-icons a:hover {
+          color: rgba(10, 155, 255, 0.925); }
+          .projects .item .project-icons a:hover:after {
+            width: 100%; }
+        .projects .item .project-icons a i {
+          margin-right: .6rem; }
+
 @media only screen and (min-width: 480px) {
   h1, h2, h3 {
     font-weight: 200; }
@@ -286,7 +362,24 @@ main {
       font-size: 1.4rem; }
     .about-info .job {
       font-size: 1.3rem;
-      padding: 1.1rem; } }
+      padding: 1.1rem; }
+  .projects {
+    grid-template-columns: 2fr 2fr; }
+    .projects .item {
+      width: 100%;
+      margin: auto; }
+      .projects .item a .overlay {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between; }
+        .projects .item a .overlay .tags div {
+          font-size: 1rem;
+          padding: .5rem 1rem;
+          margin: 0 1.1rem 1.1rem 0; }
+      .projects .item .project-icons a {
+        flex: 1;
+        padding: .5rem 1.1rem; } }
 
 @media only screen and (min-width: 992px) {
   h1.lg-heading, h2.lg-heading, h3.lg-heading {
@@ -302,7 +395,7 @@ main {
   .about-info {
     padding: 1.2rem;
     grid-template-areas: 'bioimg bio bio' 'job1 job2 job3';
-    grid-template-columns: repeat(3, 3fr); }
+    grid-template-columns: repeat(3, 1fr); }
     .about-info .bio-img {
       grid-area: bioimg;
       margin: auto;
@@ -314,7 +407,20 @@ main {
       font-size: 1.4rem; }
     .about-info .job {
       font-size: 1.3rem;
-      padding: 1.1rem; } }
+      padding: 1.1rem; }
+  .projects .item a .overlay {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between; }
+    .projects .item a .overlay .tags div {
+      font-size: 1rem;
+      padding: .5rem 1rem;
+      margin: 0 1.1rem 1.1rem 0; }
+  .projects .item .project-icons a {
+    flex: 1;
+    padding: .5rem 1.1rem; } }
 
 @media only screen and (min-width: 1200px) {
   h1.lg-heading, h2.lg-heading, h3.lg-heading {

@@ -134,6 +134,121 @@ main {
 }
 
 
+// work projects
+.projects {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 1fr;
+
+  a {
+    display: block;
+  }
+  img {
+    width: 100%;
+  }
+
+  .item {
+    width: 80%;
+    margin: auto;
+
+    a {
+      box-shadow: 1px 2px 12px darken($primary-background-color, 4%);
+      position: relative;
+
+      .overlay {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 0;
+        background-color: darken($primary-background-color, 4%);        
+        overflow: hidden;
+        padding: 0 1.2rem;
+        opacity: .8;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        @include easeOut(.6s);
+
+        .tags {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-bottom: 1rem;
+
+          div {
+            font-size: .9rem;
+            padding: .4rem .9rem;
+            background-color: darken($primary-background-color, 20%);
+            margin: 0 1rem 1rem 0;
+            border-radius: 2rem;
+            border: 1px solid $secondary-color;
+            cursor: text;
+          }
+        }
+      }
+
+      &:hover {
+        .overlay {
+          height: 100%;
+          padding: 1rem 1.2rem;
+        }
+      }
+    }
+
+
+    .project-icons {
+      font-family: 'Muli', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      a {
+        flex: 1;
+        padding: .5rem 1.5rem;
+        letter-spacing: 2px;
+        border-left: .7rem solid $secondary-color;
+        background-color: darken($primary-background-color, 40%);
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 0;
+          background-color: lighten($primary-background-color, 1);
+          opacity: .3;
+          @include easeOut(.4s);
+        }
+
+        &:hover {
+          color: lighten($secondary-color, 2);
+
+          &:after {
+            width: 100%;
+          }
+        }
+
+        i {
+          margin-right: .6rem;
+        }
+      }
+
+    }
+
+  }
+
+  
+
+
+}
+
 
 
 @import 'media';
