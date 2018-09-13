@@ -87,6 +87,11 @@
         }
       }
     }
+    .current {
+      a {
+        color: $secondary-color;
+      }
+    }
   }
   .menu-branding {
     flex: 1;

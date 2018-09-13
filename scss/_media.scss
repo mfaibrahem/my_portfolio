@@ -78,6 +78,35 @@
       }
     }
   }
+
+
+  .about-info {
+    padding: 1rem;
+    grid-template-areas:
+    'bioimg bioimg'
+    'bio bio'
+    'job1 job1'
+    'job2 job3';
+    grid-template-columns: repeat(2, 1fr);
+  
+    .bio-img {
+      grid-area: bioimg;
+      margin: auto;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 3px solid $secondary-color;
+    }
+    .bio {
+      font-size: 1.4rem;
+    }
+    .job {
+      font-size: 1.3rem;
+      padding: 1.1rem;
+    }
+  }
+
+
 }
 
 
@@ -108,6 +137,31 @@
     }
     .menu-nav {
       flex: 1.25;
+    }
+  }
+
+
+  .about-info {
+    padding: 1.2rem;
+    grid-template-areas:
+    'bioimg bio bio'
+    'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+  
+    .bio-img {
+      grid-area: bioimg;
+      margin: auto;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 3px solid $secondary-color;
+    }
+    .bio {
+      font-size: 1.4rem;
+    }
+    .job {
+      font-size: 1.3rem;
+      padding: 1.1rem;
     }
   }
 }

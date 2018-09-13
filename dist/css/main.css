@@ -76,6 +76,8 @@
     transform: scale(1.1); }
   100% {
     transform: scale(1); } }
+    .menu .menu-nav .current a {
+      color: rgba(0, 151, 255, 0.925); }
   .menu .menu-branding {
     flex: 1;
     background-color: #1c1c1c;
@@ -104,70 +106,6 @@
 .menu-nav .nav-item:nth-child(4) {
   transition-delay: 0.8s; }
 
-@media only screen and (min-width: 480px) {
-  h1, h2, h3 {
-    font-weight: 200; }
-    h1.lg-heading, h2.lg-heading, h3.lg-heading {
-      font-size: 3rem; }
-  .menu .menu-nav {
-    flex: 1.7; }
-  .menu .menu-branding {
-    flex: 1; }
-    .menu .menu-branding .portrait {
-      width: 220px;
-      height: 220px; }
-  main {
-    padding: 2rem;
-    min-height: 100vh; }
-    main#home h1 {
-      margin-top: 15vh; } }
-
-@media only screen and (min-width: 768px) {
-  h1, h2, h3 {
-    font-weight: 200; }
-    h1.lg-heading, h2.lg-heading, h3.lg-heading {
-      font-size: 4.5rem; }
-  .menu {
-    flex-direction: row; }
-    .menu .menu-nav {
-      flex: 1.5;
-      transform: translateY(-100%); }
-      .menu .menu-nav .nav-item {
-        margin-bottom: 2rem;
-        font-size: 2rem; }
-    .menu .menu-branding {
-      flex: 1;
-      transform: translateY(100%); }
-      .menu .menu-branding .portrait {
-        width: 250px;
-        height: 250px; }
-  main {
-    padding: 3.5rem; }
-    main#home h1 {
-      margin-top: 20vh; } }
-
-@media only screen and (min-width: 992px) {
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
-    font-size: 6rem; }
-  main {
-    padding: 4rem; }
-    main#home h1 {
-      margin-top: 22vh; }
-  .menu .menu-branding {
-    flex: 1; }
-  .menu .menu-nav {
-    flex: 1.25; } }
-
-@media only screen and (min-width: 1200px) {
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
-    font-size: 7rem; }
-  main {
-    padding: 4.5rem; }
-  .menu .menu-branding {
-    flex: 1; }
-  .menu .menu-nav {
-    flex: 1.3; } }
-
 * {
   box-sizing: border-box; }
 
@@ -175,6 +113,7 @@ body {
   color: #eee;
   margin: 0;
   height: 100%;
+  background-color: #333;
   font-family: 'Dosis', sans-serif; }
   body#bg-img {
     background-image: url("/dist/assets/img/background.jpg");
@@ -197,9 +136,9 @@ ul {
   list-style-type: none;
   margin: 0; }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
   margin: 0; }
-  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+  h1.sm-heading, h2.sm-heading, h3.sm-heading, h4.sm-heading, h5.sm-heading {
     max-width: max-content;
     margin-bottom: 2rem;
     padding: .2rem 1rem;
@@ -250,3 +189,139 @@ main {
     transform: scale(1); } }
   main#home {
     overflow: hidden; }
+  main#about {
+    padding: 1.5rem; }
+
+.about-info {
+  font-family: 'Muli', sans-serif;
+  display: grid;
+  grid-template-areas: 'bioimg' 'bio' 'job1' 'job2' 'job3';
+  grid-gap: 30px;
+  grid-template-columns: 1fr; }
+  .about-info .bio-img {
+    grid-area: bioimg;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 151, 255, 0.925); }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.2rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+  .about-info .job-3 {
+    grid-area: job3; }
+  .about-info .job {
+    font-size: 1.1rem;
+    background-color: #404040;
+    border-bottom: 5px solid rgba(0, 151, 255, 0.925);
+    padding: 1rem;
+    border-radius: 3px;
+    box-shadow: 1px 2px 6px #404040; }
+    .about-info .job h3 {
+      color: rgba(0, 151, 255, 0.925);
+      margin-bottom: .5rem; }
+  .about-info h3, .about-info h5 {
+    font-weight: 300; }
+  .about-info p {
+    line-height: 1.6;
+    font-weight: 200; }
+
+@media only screen and (min-width: 480px) {
+  h1, h2, h3 {
+    font-weight: 200; }
+    h1.lg-heading, h2.lg-heading, h3.lg-heading {
+      font-size: 3rem; }
+  .menu .menu-nav {
+    flex: 1.7; }
+  .menu .menu-branding {
+    flex: 1; }
+    .menu .menu-branding .portrait {
+      width: 220px;
+      height: 220px; }
+  main {
+    padding: 2rem;
+    min-height: 100vh; }
+    main#home h1 {
+      margin-top: 15vh; } }
+
+@media only screen and (min-width: 768px) {
+  h1, h2, h3 {
+    font-weight: 200; }
+    h1.lg-heading, h2.lg-heading, h3.lg-heading {
+      font-size: 4.5rem; }
+  .menu {
+    flex-direction: row; }
+    .menu .menu-nav {
+      flex: 1.5;
+      transform: translateY(-100%); }
+      .menu .menu-nav .nav-item {
+        margin-bottom: 2rem;
+        font-size: 2rem; }
+    .menu .menu-branding {
+      flex: 1;
+      transform: translateY(100%); }
+      .menu .menu-branding .portrait {
+        width: 250px;
+        height: 250px; }
+  main {
+    padding: 3.5rem; }
+    main#home h1 {
+      margin-top: 20vh; }
+  .about-info {
+    padding: 1rem;
+    grid-template-areas: 'bioimg bioimg' 'bio bio' 'job1 job1' 'job2 job3';
+    grid-template-columns: repeat(2, 1fr); }
+    .about-info .bio-img {
+      grid-area: bioimg;
+      margin: auto;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 3px solid rgba(0, 151, 255, 0.925); }
+    .about-info .bio {
+      font-size: 1.4rem; }
+    .about-info .job {
+      font-size: 1.3rem;
+      padding: 1.1rem; } }
+
+@media only screen and (min-width: 992px) {
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    font-size: 6rem; }
+  main {
+    padding: 4rem; }
+    main#home h1 {
+      margin-top: 22vh; }
+  .menu .menu-branding {
+    flex: 1; }
+  .menu .menu-nav {
+    flex: 1.25; }
+  .about-info {
+    padding: 1.2rem;
+    grid-template-areas: 'bioimg bio bio' 'job1 job2 job3';
+    grid-template-columns: repeat(3, 3fr); }
+    .about-info .bio-img {
+      grid-area: bioimg;
+      margin: auto;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 3px solid rgba(0, 151, 255, 0.925); }
+    .about-info .bio {
+      font-size: 1.4rem; }
+    .about-info .job {
+      font-size: 1.3rem;
+      padding: 1.1rem; } }
+
+@media only screen and (min-width: 1200px) {
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    font-size: 7rem; }
+  main {
+    padding: 4.5rem; }
+  .menu .menu-branding {
+    flex: 1; }
+  .menu .menu-nav {
+    flex: 1.3; } }
