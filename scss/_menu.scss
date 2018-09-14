@@ -92,6 +92,12 @@
         color: $secondary-color;
       }
     }
+    .canvas-overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: $background-opacity;
+    }
   }
   .menu-branding {
     flex: 1;

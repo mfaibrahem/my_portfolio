@@ -1,3 +1,8 @@
+
+import {Circle} from './circle';
+import {c} from './circle';
+import {UImenunavRect} from './circle';
+
 const UImenuBtn = document.querySelector('.menu-btn');
 const UImenu = document.querySelector('.menu');
 const UImenuBranding = document.querySelector('.menu-branding');
@@ -44,3 +49,23 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+
+// canvas
+const circleArray = [];
+for (let i=0; i < Math.random()*30+20; i++) {
+  let r = Math.random() * 5 + 10;
+  let x = Math.random() * (UImenunavRect.width-r*2) + r;
+  let y = Math.random() * (UImenunavRect.height-r*2) + r;
+  let dx = (Math.random() - .5) * 3;
+  let dy = (Math.random() - .5) * 1.5;
+  circleArray.push(new Circle(x, y, r, dx, dy));
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+  c.clearRect(0, 0, UImenunavRect.width, UImenunavRect.height);
+  circleArray.forEach(circle => circle.update);
+}
+
+animate();

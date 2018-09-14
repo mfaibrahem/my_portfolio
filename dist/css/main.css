@@ -78,6 +78,11 @@
     transform: scale(1); } }
     .menu .menu-nav .current a {
       color: rgba(0, 151, 255, 0.925); }
+    .menu .menu-nav .canvas-overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0.6; }
   .menu .menu-branding {
     flex: 1;
     background-color: #1c1c1c;
