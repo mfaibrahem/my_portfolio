@@ -73,12 +73,15 @@ main {
   &#home {
     overflow: hidden;
   }
-  &#about {
+  &#home,
+  &#about,
+  &#work,
+  &#contact {
     padding: 1.5rem;
   }
 }
 
-
+// about page info
 .about-info {
   font-family: 'Muli', sans-serif;
   display: grid;
@@ -148,7 +151,7 @@ main {
   }
 
   .item {
-    width: 80%;
+    width: 100%;
     margin: auto;
 
     a {
@@ -214,7 +217,7 @@ main {
         border-left: .7rem solid $secondary-color;
         background-color: darken($primary-background-color, 40%);
 
-        &:after {
+        &::after {
           content: "";
           position: absolute;
           bottom: 0;
@@ -243,12 +246,50 @@ main {
     }
 
   }
-
-  
-
-
 }
 
+
+// contact page
+.boxes {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+
+  div {
+    position: relative;
+    font-size: 1rem;
+    padding: 1rem 1.4rem;
+    border: 2px solid $secondary-color;
+    border-radius: 4rem;
+    margin-bottom: 2rem;
+    cursor: text;
+    letter-spacing: 2px;
+    @include easeOut(.3s);
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 4rem;
+      transform: scale(0);
+      // @include easeOut(.3s);
+    }
+    &:hover {
+      transform: scale(1.1);
+      
+      &::after {
+        background-color: darken($primary-background-color, 20%);
+        opacity: .25;
+        transform: scale(1);
+        @include easeOut(.3s);
+      }
+    }
+  }
+}
 
 
 @import 'media';

@@ -189,7 +189,7 @@ main {
     transform: scale(1); } }
   main#home {
     overflow: hidden; }
-  main#about {
+  main#home, main#about, main#work, main#contact {
     padding: 1.5rem; }
 
 .about-info {
@@ -239,7 +239,7 @@ main {
   .projects img {
     width: 100%; }
   .projects .item {
-    width: 80%;
+    width: 100%;
     margin: auto; }
     .projects .item a {
       box-shadow: 1px 2px 12px #292929;
@@ -288,7 +288,7 @@ main {
         letter-spacing: 2px;
         border-left: 0.7rem solid rgba(0, 151, 255, 0.925);
         background-color: black; }
-        .projects .item .project-icons a:after {
+        .projects .item .project-icons a::after {
           content: "";
           position: absolute;
           bottom: 0;
@@ -305,6 +305,38 @@ main {
             width: 100%; }
         .projects .item .project-icons a i {
           margin-right: .6rem; }
+
+.boxes {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: max-content; }
+  .boxes div {
+    position: relative;
+    font-size: 1rem;
+    padding: 1rem 1.4rem;
+    border: 2px solid rgba(0, 151, 255, 0.925);
+    border-radius: 4rem;
+    margin-bottom: 2rem;
+    cursor: text;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-out; }
+    .boxes div::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 4rem;
+      transform: scale(0); }
+    .boxes div:hover {
+      transform: scale(1.1); }
+      .boxes div:hover::after {
+        background-color: black;
+        opacity: .25;
+        transform: scale(1);
+        transition: all 0.3s ease-out; }
 
 @media only screen and (min-width: 480px) {
   h1, h2, h3 {
@@ -364,7 +396,8 @@ main {
       font-size: 1.3rem;
       padding: 1.1rem; }
   .projects {
-    grid-template-columns: 2fr 2fr; }
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 60px; }
     .projects .item {
       width: 100%;
       margin: auto; }
@@ -379,7 +412,12 @@ main {
           margin: 0 1.1rem 1.1rem 0; }
       .projects .item .project-icons a {
         flex: 1;
-        padding: .5rem 1.1rem; } }
+        padding: .5rem 1.1rem; }
+  .boxes div {
+    font-size: 1.8rem;
+    padding: 1.5rem 2rem;
+    border-radius: 4rem;
+    margin-bottom: 3rem; } }
 
 @media only screen and (min-width: 992px) {
   h1.lg-heading, h2.lg-heading, h3.lg-heading {
@@ -408,19 +446,23 @@ main {
     .about-info .job {
       font-size: 1.3rem;
       padding: 1.1rem; }
-  .projects .item a .overlay {
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between; }
-    .projects .item a .overlay .tags div {
-      font-size: 1rem;
-      padding: .5rem 1rem;
-      margin: 0 1.1rem 1.1rem 0; }
-  .projects .item .project-icons a {
-    flex: 1;
-    padding: .5rem 1.1rem; } }
+  .projects {
+    padding: 0 4rem; }
+    .projects .item a .overlay {
+      font-size: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-between; }
+      .projects .item a .overlay .tags div {
+        font-size: 1rem;
+        padding: .5rem 1rem;
+        margin: 0 1.1rem 1.1rem 0; }
+    .projects .item .project-icons a {
+      flex: 1;
+      padding: .5rem 1.1rem; }
+  .boxes div {
+    font-size: 1.9rem; } }
 
 @media only screen and (min-width: 1200px) {
   h1.lg-heading, h2.lg-heading, h3.lg-heading {
@@ -430,4 +472,9 @@ main {
   .menu .menu-branding {
     flex: 1; }
   .menu .menu-nav {
-    flex: 1.3; } }
+    flex: 1.3; }
+  .boxes div {
+    font-size: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: 4.2rem;
+    margin-bottom: 3.2rem; } }
