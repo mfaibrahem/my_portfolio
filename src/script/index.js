@@ -53,8 +53,8 @@ function toggleMenu() {
 
 // canvas
 const circleArray = [];
-for (let i=0; i < Math.random()*30+20; i++) {
-  let r = Math.random() * 5 + 10;
+for (let i=0; i < Math.random()*30+40; i++) {
+  let r = Math.random() * 3 + 3;
   let x = Math.random() * (UImenunavRect.width-r*2) + r;
   let y = Math.random() * (UImenunavRect.height-r*2) + r;
   let dx = (Math.random() - .5) * 3;
