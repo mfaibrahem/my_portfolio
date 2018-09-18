@@ -82,7 +82,9 @@
       position: absolute;
       left: 0;
       top: 0;
-      opacity: 0.6; }
+      right: 0;
+      bottom: 0;
+      opacity: .3; }
   .menu .menu-branding {
     flex: 1;
     background-color: #1c1c1c;
@@ -196,6 +198,12 @@ main {
     overflow: hidden; }
   main#home, main#about, main#work, main#contact {
     padding: 1.5rem; }
+  main#about .canvas-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: .3; }
 
 .about-info {
   font-family: 'Muli', sans-serif;
