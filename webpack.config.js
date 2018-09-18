@@ -11,6 +11,7 @@ module.exports = {
     rules: [
       { test: /\.js$/, exclude: '/node_modules/', use: 'babel-loader' }
     ]
-  }
+  },
+  devServer: { contentBase: path.resolve(__dirname, 'dist'), port: 3000 }
 
 };

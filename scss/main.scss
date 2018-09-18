@@ -78,10 +78,20 @@ main {
   &#contact {
     padding: 1.5rem;
   }
+  &#about {
+    .canvas-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: .3;
+    }
+  }
 }
 
 // about page info
 .about-info {
+
   font-family: 'Muli', sans-serif;
   display: grid;
   grid-template-areas:

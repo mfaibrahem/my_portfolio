@@ -1,7 +1,5 @@
 
-import {Circle} from './circle';
-import {c} from './circle';
-import {UImenunavRect} from './circle';
+import { fun } from './animate_circle';
 
 const UImenuBtn = document.querySelector('.menu-btn');
 const UImenu = document.querySelector('.menu');
@@ -50,22 +48,4 @@ function toggleMenu() {
   }
 }
 
-
-// canvas
-const circleArray = [];
-for (let i=0; i < Math.random()*30+40; i++) {
-  let r = Math.random() * 3 + 3;
-  let x = Math.random() * (UImenunavRect.width-r*2) + r;
-  let y = Math.random() * (UImenunavRect.height-r*2) + r;
-  let dx = (Math.random() - .5) * 3;
-  let dy = (Math.random() - .5) * 1.5;
-  circleArray.push(new Circle(x, y, r, dx, dy));
-}
-
-function animate() {
-  requestAnimationFrame(animate);
-  c.clearRect(0, 0, UImenunavRect.width, UImenunavRect.height);
-  circleArray.forEach(circle => circle.update);
-}
-
-animate();
+fun();
