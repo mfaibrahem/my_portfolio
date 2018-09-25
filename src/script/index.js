@@ -1,5 +1,6 @@
 
 import { fun } from './animate_circle';
+import { starShowerFun } from './animate_star';
 
 const UImenuBtn = document.querySelector('.menu-btn');
 const UImenu = document.querySelector('.menu');
@@ -49,3 +50,5 @@ function toggleMenu() {
 }
 
 fun();
+
+starShowerFun();

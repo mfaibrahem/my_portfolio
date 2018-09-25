@@ -123,17 +123,13 @@
       a {
           
         .overlay {
-          display: flex;
-          flex-direction: column;
-          flex-wrap: nowrap;
-          justify-content: space-between;
   
           .tags {
               
             div {
-              font-size: 1rem;
-              padding: .5rem 1rem;
-              margin: 0 1.1rem 1.1rem 0;
+              font-size: .9rem;
+              padding: .3rem .6rem;
+              margin: 0 .6rem .6rem 0;
             }
           }
         }
@@ -230,18 +226,13 @@
       a {
           
         .overlay {
-          font-size: 1.2rem;
-          display: flex;
-          flex-direction: column;
-          flex-wrap: nowrap;
-          justify-content: space-between;
   
           .tags {
               
             div {
-              font-size: 1rem;
-              padding: .5rem 1rem;
-              margin: 0 1.1rem 1.1rem 0;
+              font-size: .9rem;
+              padding: .4rem .7rem;
+              margin: 0 .7rem .7rem 0;
             }
           }
         }

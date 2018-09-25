@@ -8,7 +8,7 @@
 }
 
 body {
-  @include background();
+  // @include background();
   color: $primary-color;
   margin: 0;
   height: 100%;
@@ -25,6 +25,7 @@ ul {
 
 // headings
 h1, h2, h3, h4, h5 {
+  font-weight: 200;
   margin: 0;
   &.sm-heading {
     max-width: max-content;
@@ -71,6 +72,25 @@ main {
   }
   &#home {
     overflow: hidden;
+
+    h1 {
+      margin-top: 15vh;
+    }
+
+    .home-canvas-div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      canvas {
+        display: block;
+      }
+    }
+    .name {
+      position: absolute;
+    }
   }
   &#home,
   &#about,
@@ -186,6 +206,10 @@ main {
         letter-spacing: 1px;
         @include easeOut(.6s);
 
+        h1 {
+          margin-top: 1.5rem;
+        }
+
         .tags {
           display: flex;
           flex-direction: row;
@@ -193,10 +217,10 @@ main {
           margin-bottom: 1rem;
 
           div {
-            font-size: .9rem;
-            padding: .4rem .9rem;
+            font-size: .8rem;
+            padding: .2rem .6rem;
             background-color: darken($primary-background-color, 20%);
-            margin: 0 1rem 1rem 0;
+            margin: 0 .6rem .6rem 0;
             border-radius: 2rem;
             border: 1px solid $secondary-color;
             cursor: text;
