@@ -45,6 +45,7 @@ export function fun() {
            ) circle.r += 1;
         else if (circle.r > circle.minR)
             circle.r -= 1;
+
           
       });
     }
@@ -103,7 +104,7 @@ function resize(canvas, parentRect) {
 function buildCircleArray(array, n, ele, ctx) {
 
   for (let i=0; i < n; i++) {
-    let r = Math.random() + 2;
+    let r = Math.random() + 1;
     let x = Math.random() * (ele.width-r*2) + r;
     let y = Math.random() * (ele.height-r*2) + r;
     let dx = (Math.random() - .5) * 3;

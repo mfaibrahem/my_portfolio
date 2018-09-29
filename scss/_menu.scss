@@ -39,7 +39,6 @@
   top: 0;
   width: 100%;
   height: 100vh;
-  opacity: $background-opacity + .3;
   visibility: hidden;
   display: flex;
   flex-direction: column;
@@ -112,8 +111,9 @@
     .portrait {
       width: 180px;
       height: 180px;
-      background-image: url('../assets/img/portrait.png');
+      background-image: url('../assets/img/img.png');
       background-position: center;
+      background-position-y: 20%;
       background-size: cover;
       border-radius: 50%;
       border: 1px solid $secondary-color;
