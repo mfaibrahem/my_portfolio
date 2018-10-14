@@ -163,6 +163,7 @@ function init() {
   moonArray = [];
   miniMoonArray = [];
 
+
   for (let i=0; i < 30; i++) {
     let r = Math.random() + 2;
     let x = randomIntFromRnage(r, starCanvas.width - r);

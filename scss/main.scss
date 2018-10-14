@@ -1,6 +1,9 @@
 @import 'config';
 @import 'menu';
+@import 'mainLogo';
 
+
+@include fontFace;
 
 // base style
 * {
@@ -13,9 +16,7 @@ body {
   margin: 0;
   height: 100%;
   background-color: $primary-background-color;
-  // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  // font-family: 'Muli', sans-serif;
-  font-family: 'Dosis', sans-serif;
+  font-family: gothamLight, sans-serif;
 }
 ul {
   padding: 0;
@@ -36,13 +37,14 @@ h1, h2, h3, h4, h5 {
 }
 
 a {
+  
   color: $primary-color;
   text-decoration: none;
 }
 
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 1000;
   width: 100%;
 }
 
@@ -51,6 +53,8 @@ header {
 }
 
 main {
+
+  @include mainLogo;
   min-height: 100vh;
   .icons {
     display: flex;
@@ -94,10 +98,13 @@ main {
   }
   &#home,
   &#about,
-  &#work,
   &#contact {
     padding: 1.5rem;
   }
+  &#work {
+    padding: 0;
+  }
+
   &#about {
     .canvas-overlay {
       position: absolute;
@@ -112,7 +119,7 @@ main {
 // about page info
 .about-info {
 
-  font-family: 'Muli', sans-serif;
+  // font-family: gothamLight, sans-serif;
   display: grid;
   grid-template-areas:
   'bioimg'
@@ -156,13 +163,13 @@ main {
     }
     font-size: 1.1rem;
     background-color: lighten($primary-background-color, 5%);
-    border-bottom: 5px solid $secondary-color;
+    border-bottom: 5px solid #f53b57;
     padding: 1rem;
     border-radius: 3px;
     box-shadow: 1px 2px 6px lighten($primary-background-color, 5%);
   }
   h3, h5 {
-    font-weight: 300;
+    font-weight: 400;
   }
   p {
     line-height: 1.6;
@@ -174,7 +181,6 @@ main {
 // work projects
 .projects {
   display: grid;
-  grid-gap: 3rem;
   grid-template-columns: 1fr;
 
   a {
@@ -187,101 +193,198 @@ main {
   .item {
     width: 100%;
     margin: auto;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 
-    a {
-      box-shadow: 1px 2px 12px darken($primary-background-color, 4%);
-      position: relative;
 
-      .overlay {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-between;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+    }
 
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        height: 0;
-        background-color: darken($primary-background-color, 4%);        
-        overflow: hidden;
-        padding: 0 1.2rem;
-        opacity: .8;
-        line-height: 1.5;
-        letter-spacing: 1px;
-        @include easeOut(.6s);
+    .item-content-wrapper {
+      position: absolute;
+      padding: 3rem;
+      left: 0;
+      bottom: 0;
+      // font-family: gothamLight, sans-serif;
+      text-transform: uppercase;
+      color: #FFF;
+      z-index: 2;
+      
+      p {
+        font-size: 1.3rem;
+        letter-spacing: 0;
+        font-weight: 400;
+        margin-bottom: .8rem;
+      }
 
-        h1 {
-          margin-top: 1.5rem;
-        }
+      h4 {
+        // font-family: gothamLight;
+        font-size: .9rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+      }
+      .project-icons {
 
-        .tags {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          margin-bottom: 1rem;
+        a {
+          // font-family: gothamLight;
+          font-weight: bold;
+          font-size: .9rem;
+          background-color: rgba(255, 255, 255, 0);
+          border: 2px solid rgba(255, 255, 255, .5);
+          display: inline-block;
+          padding: 1rem 2rem;
+          margin-right: 2rem;
+          position: relative;
 
-          div {
+          &:hover {
+            background-color: #FFF;
+            border-color: #FFF;
+            @include easeOut(.2s);
+
+            &::after {
+              position: absolute;
+              content: "";
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(255, 255, 255, 0);
+              background-image: linear-gradient(to right,rgba(255,255,255,0) 25%,rgba(255, 255, 255, 0.6) 75%);
+
+            }
+          }
+
+          i {
             font-size: .8rem;
-            padding: .2rem .6rem;
-            background-color: darken($primary-background-color, 20%);
-            margin: 0 .6rem .6rem 0;
-            border-radius: 2rem;
-            border: 1px solid $secondary-color;
-            cursor: text;
+            margin-right: .3rem;
           }
         }
       }
 
-      &:hover {
-        .overlay {
-          height: 100%;
-          padding: 1rem 1.2rem;
-        }
-      }
     }
+    
 
-
-    .project-icons {
-      font-family: 'Muli', sans-serif;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-
+    &.item-1 {
+      background-image: url("../assets/img/tourism-img.jpg");
+      &::after {
+        background-color: rgba(22,36,60,.7);
+        background-image: linear-gradient(to right,rgba(22,36,60,.5),rgba(22,36,60,0));
+      }
       a {
-        flex: 1;
-        padding: .5rem 1.5rem;
-        letter-spacing: 2px;
-        border-left: .7rem solid $secondary-color;
-        background-color: darken($primary-background-color, 40%);
-
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          top: 0;
-          height: 100%;
-          width: 0;
-          background-color: lighten($primary-background-color, 1);
-          opacity: .3;
-          @include easeOut(.4s);
-        }
-
         &:hover {
-          color: lighten($secondary-color, 2);
-
-          &:after {
-            width: 100%;
-          }
+          color: rgb(22, 36, 60);
         }
+      }
+    }
 
-        i {
-          margin-right: .6rem;
+    &.item-2 {
+      background-image: url("../assets/img/star_shower.png");
+      &::after {
+        background-color: rgba(80,9,75,.5);
+        background-image: linear-gradient(to right,rgba(80,9,75,.5),rgba(80,9,75,0));
+      }
+      a {
+        &:hover {
+          color: rgb(80, 9, 75);
+        }
+      }
+    }
+    &.item-3 {
+      background-image: url("../assets/img/task-list.png");
+      &::after {
+        background: rgba(97, 0, 58, 0.7);
+        background-image: linear-gradient(to right, rgba(109, 33, 79, 0.7), transparent);
+      }
+      a {
+        &:hover {
+          color: rgb(97, 0, 58);
+        }
+      }
+    }
+    &.item-4 {
+      background-image: url("../assets/img/tank-shooter.png");
+      &::after {
+        background-color: rgba(15, 202, 218, 0.49);
+        background-image: linear-gradient(to right, rgba(15, 202, 218, 0.49), transparent);
+      }
+      .project-icons {
+
+        a {
+          color: #222;
+          background-color: rgba(0, 0, 0, 0);
+          border-color: #333;
+          &:hover {
+            color: rgb(15, 202, 218);
+            background-color: #333;
+            border-color: #333;
+
+            &::after {
+              background-color: transparent;
+              background-image: linear-gradient(to right, rgba(0, 0, 0, 0)25%, rgba(0, 0, 0, .6)75%);
+            }
+          }
         }
       }
 
+      p, h4 {
+        color: #222;
+      }
     }
+    &.item-5 {
+      background-image: url("../assets/img/bouncing-circles.png");
+      &::after {
+        background-color: rgba(24, 44, 97, 0.78);
+        background-image: linear-gradient(to right, rgba(24, 44, 97, 0.78), rgba(24, 44, 97, 0));
+      }
+      a {
+        &:hover {
+          color: rgb(24, 44, 97);
+        }
+      }
+    }
+    &.item-6 {
+      background-image: url("../assets/img/bouncing-balls.png");
+      &::after {
+        background-color: rgba(183, 157, 2, 0.75);
+        background-image: linear-gradient(to right, rgba(183, 157, 2, 0.9), transparent);
+      }
+
+      .project-icons {
+
+        a {
+          color: #222;
+          background-color: transparent;
+          border-color: #333;
+
+          &:hover {
+            color: yellow;
+            border-color: #333;
+            background-color: #333;
+
+            &::after {
+              background-color: transparent;
+              background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, .6) 75%);
+            }
+          }
+        }
+      }
+      p, h4 {
+        color: #222;
+      }
+    }
+
+
+
 
   }
 }
@@ -328,6 +431,9 @@ main {
     }
   }
 }
+
+
+@import 'footer';
 
 
 @import 'media';

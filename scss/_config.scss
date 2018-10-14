@@ -1,9 +1,21 @@
-$primary-background-color: #333;
-$primary-color: #fff;
-$secondary-color: rgba(0, 151, 255, 0.925); 
+$primary-background-color: #192a56;
+$primary-color: #FFF;
+$secondary-color: #42a5f5;
 $show-home-img: true;
 $home-img: url("../assets/img/background.jpg");
 $background-opacity: .6;
+
+
+@mixin fontFace {
+  @font-face {
+    font-family: gothamLight;
+    src: url('../assets/fonts/GothamRounded-Light.otf');
+  }
+  @font-face {
+    font-family: gothamMedium;
+    src: url('../assets/fonts/GothamRounded-Medium.otf');
+  }
+}
 
 
 @mixin background() {

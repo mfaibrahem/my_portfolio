@@ -113,28 +113,11 @@
 
   // work page
   .projects {
-    grid-template-columns: 2fr 2fr;
-    grid-gap: 60px;
 
     .item {
       width: 100%;
       margin: auto;
   
-      a {
-          
-        .overlay {
-  
-          .tags {
-              
-            div {
-              font-size: .9rem;
-              padding: .3rem .6rem;
-              margin: 0 .6rem .6rem 0;
-            }
-          }
-        }
-
-      }
       .project-icons {
   
         a {
@@ -219,25 +202,12 @@
 
   // work page
   .projects {
-    padding: 0 4rem;
+
+    grid-template-columns: 2fr 2fr;
+
 
     .item {
-  
-      a {
-          
-        .overlay {
-  
-          .tags {
-              
-            div {
-              font-size: .9rem;
-              padding: .4rem .7rem;
-              margin: 0 .7rem .7rem 0;
-            }
-          }
-        }
 
-      }
       .project-icons {
   
         a {
@@ -257,6 +227,47 @@
       font-size: 1.9rem;
     }
   }
+
+
+
+
+
+
+
+  footer {
+
+    .bottom {
+      
+      display: flex;
+      justify-content: space-between;
+      padding: 0 2.4rem;
+
+      .left {
+        flex-direction: row;
+        
+        .footer-nav {
+          margin-left: 2rem;  
+        }
+      } // end left
+
+      .right {
+        div {
+          align-items: flex-start;
+        }
+      }
+  
+    } // end bottom
+  
+  
+  
+  }
+
+
+
+
+
+
+
 }
 
 
