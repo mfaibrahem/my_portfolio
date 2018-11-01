@@ -297,6 +297,10 @@ main {
     main#work .main-logo-link {
       margin-left: 2rem;
       margin-top: 2rem; }
+  main#about .about-heading {
+    margin: 0 0 2rem 0;
+    padding: 1rem;
+    color: cadetblue; }
   main#about .canvas-overlay {
     position: absolute;
     top: 0;
@@ -321,12 +325,29 @@ main {
     background-position-y: 30%;
     background-repeat: no-repeat;
     border-radius: 50%;
-    border: 3px solid #42a5f5; }
+    border: 3px solid cadetblue; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.2rem; }
+    .about-info .bio h3 {
+      color: cadetblue;
+      border-bottom: 1px solid #f53b57;
+      width: max-content; }
+    .about-info .bio ul {
+      padding-left: 2rem;
+      margin-top: 2rem;
+      list-style-type: disc;
+      color: #42a5f5; }
+      .about-info .bio ul li {
+        margin-bottom: .6rem; }
   .about-info .job-1 {
     grid-area: job1; }
+  .about-info .job-2 ul, .about-info .job-3 ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+    color: silver; }
+    .about-info .job-2 ul li, .about-info .job-3 ul li {
+      margin-bottom: .5rem; }
   .about-info .job-2 {
     grid-area: job2; }
   .about-info .job-3 {
@@ -334,18 +355,23 @@ main {
   .about-info .job {
     font-size: 1.1rem;
     background-color: #1f346a;
-    border-bottom: 5px solid #f53b57;
+    border-bottom: 5px solid cadetblue;
     padding: 1rem;
     border-radius: 3px;
     box-shadow: 1px 2px 6px #1f346a; }
     .about-info .job h3 {
-      color: #42a5f5;
-      margin-bottom: .5rem; }
-  .about-info h3, .about-info h5 {
-    font-weight: 400; }
+      color: cadetblue;
+      margin-bottom: .5rem;
+      font-weight: 400;
+      padding: 0 0 1rem 1rem;
+      border-bottom: 1px solid cadetblue;
+      margin-left: -1rem;
+      margin-right: -1rem;
+      margin-bottom: 1rem; }
   .about-info p {
     line-height: 1.6;
-    font-weight: 200; }
+    font-weight: 200;
+    color: silver; }
 
 .projects {
   display: grid;
@@ -666,14 +692,11 @@ footer {
       grid-area: bioimg;
       margin: auto;
       width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      border: 3px solid #42a5f5; }
+      height: 250px; }
     .about-info .bio {
-      font-size: 1.4rem; }
+      font-size: 1.2rem; }
     .about-info .job {
-      font-size: 1.3rem;
-      padding: 1.1rem; }
+      font-size: 1.1rem; }
   .projects .item {
     width: 100%;
     margin: auto; }
@@ -699,20 +722,11 @@ footer {
     flex: 1.25; }
   .about-info {
     padding: 1.2rem;
-    grid-template-areas: 'bioimg bio bio' 'job1 job2 job3';
-    grid-template-columns: repeat(3, 1fr); }
+    grid-template-areas: 'bioimg bio bio bio' 'job1 job1 job1 job1' 'job2 job2 job3 job3';
+    grid-template-columns: repeat(4, 1fr); }
     .about-info .bio-img {
       grid-area: bioimg;
-      margin: auto;
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      border: 3px solid #42a5f5; }
-    .about-info .bio {
-      font-size: 1.4rem; }
-    .about-info .job {
-      font-size: 1.3rem;
-      padding: 1.1rem; }
+      margin: auto; }
   .projects {
     grid-template-columns: 2fr 2fr; }
     .projects .item .project-icons a {
