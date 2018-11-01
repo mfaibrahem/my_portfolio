@@ -94,15 +94,12 @@
       margin: auto;
       width: 250px;
       height: 250px;
-      border-radius: 50%;
-      border: 3px solid $secondary-color;
     }
     .bio {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
     .job {
-      font-size: 1.3rem;
-      padding: 1.1rem;
+      font-size: 1.1rem;
     }
   }
 
@@ -178,25 +175,15 @@
   .about-info {
     padding: 1.2rem;
     grid-template-areas:
-    'bioimg bio bio'
-    'job1 job2 job3';
-    grid-template-columns: repeat(3, 1fr);
-  
+    'bioimg bio bio bio'
+    'job1 job1 job1 job1'
+    'job2 job2 job3 job3';
+    grid-template-columns: repeat(4, 1fr);
     .bio-img {
       grid-area: bioimg;
       margin: auto;
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      border: 3px solid $secondary-color;
     }
-    .bio {
-      font-size: 1.4rem;
-    }
-    .job {
-      font-size: 1.3rem;
-      padding: 1.1rem;
-    }
+    
   }
 
 

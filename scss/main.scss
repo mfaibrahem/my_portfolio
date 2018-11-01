@@ -110,6 +110,11 @@ main {
   }
 
   &#about {
+    .about-heading {
+      margin: 0 0 2rem 0;
+      padding: 1rem;
+      color: cadetblue;
+    }
     .canvas-overlay {
       position: absolute;
       top: 0;
@@ -146,14 +151,38 @@ main {
     background-position-y: 30%;
     background-repeat: no-repeat;
     border-radius: 50%;
-    border: 3px solid $secondary-color;
+    border: 3px solid cadetblue;
   }
   .bio {
     grid-area: bio;
     font-size: 1.2rem;
+    h3 {
+      color: cadetblue;
+      border-bottom: 1px solid #f53b57;
+      width: max-content;
+    }
+    ul {
+      padding-left: 2rem;
+      margin-top: 2rem;
+      list-style-type: disc;
+      color: #42a5f5;
+      li {
+        margin-bottom: .6rem;
+      }
+    }
   }
   .job-1 {
     grid-area: job1;
+  }
+  .job-2, .job-3 {
+    ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+      color: silver;
+      li {
+        margin-bottom: .5rem;
+      }
+    }
   }
   .job-2 {
     grid-area: job2;
@@ -163,22 +192,26 @@ main {
   }
   .job {
     h3 {
-      color: $secondary-color;
+      color: cadetblue;
       margin-bottom: .5rem;
+      font-weight: 400;
+      padding: 0 0 1rem 1rem;
+      border-bottom: 1px solid cadetblue;
+      margin-left: -1rem;
+      margin-right: -1rem;
+      margin-bottom: 1rem;
     }
     font-size: 1.1rem;
     background-color: lighten($primary-background-color, 5%);
-    border-bottom: 5px solid #f53b57;
+    border-bottom: 5px solid cadetblue;
     padding: 1rem;
     border-radius: 3px;
     box-shadow: 1px 2px 6px lighten($primary-background-color, 5%);
   }
-  h3, h5 {
-    font-weight: 400;
-  }
   p {
     line-height: 1.6;
     font-weight: 200;
+    color: silver;
   }
 }
 

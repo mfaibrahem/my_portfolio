@@ -29,11 +29,11 @@ export function fun() {
     window.addEventListener('resize', () => {
       resize(UIaboutCanvas, UIabout.getBoundingClientRect());
       aboutArray = [];
-      buildCircleArray(aboutArray, 400, UIabout.getBoundingClientRect(), ctxAboutCanvas);
+      buildCircleArray(aboutArray, 200, UIabout.getBoundingClientRect(), ctxAboutCanvas);
 
     });
     
-    buildCircleArray(aboutArray, 400, UIabout.getBoundingClientRect(), ctxAboutCanvas);
+    buildCircleArray(aboutArray, 200, UIabout.getBoundingClientRect(), ctxAboutCanvas);
     function animateAbout() {
       requestAnimationFrame(animateAbout);
       ctxAboutCanvas.clearRect(0, 0, UIabout.getBoundingClientRect().width, UIabout.getBoundingClientRect().height);
