@@ -405,7 +405,6 @@ main {
       color: #FFF;
       z-index: 2; }
       .projects .item .item-content-wrapper p {
-        font-size: 1.3rem;
         letter-spacing: 0;
         font-weight: 400;
         margin-bottom: .8rem; }
@@ -414,11 +413,11 @@ main {
         margin-bottom: 2rem; }
       .projects .item .item-content-wrapper .project-icons a {
         font-weight: bold;
-        font-size: .9rem;
+        font-size: .8rem;
         background-color: rgba(255, 255, 255, 0);
         border: 2px solid rgba(255, 255, 255, 0.5);
         display: inline-block;
-        padding: 1rem 2rem;
+        padding: .6rem 1rem;
         margin-right: 2rem;
         position: relative; }
         .projects .item .item-content-wrapper .project-icons a:hover {
@@ -437,6 +436,8 @@ main {
         .projects .item .item-content-wrapper .project-icons a i {
           font-size: .8rem;
           margin-right: .3rem; }
+        .projects .item .item-content-wrapper .project-icons a:nth-of-type(1) {
+          margin-bottom: 1rem; }
     .projects .item.item-0 {
       background-image: url("../assets/img/storyBook-img.png"); }
       .projects .item.item-0::after {
@@ -700,9 +701,15 @@ footer {
   .projects .item {
     width: 100%;
     margin: auto; }
-    .projects .item .project-icons a {
+    .projects .item .item-content-wrapper p {
+      font-size: 1.3rem; }
+    .projects .item .item-content-wrapper .project-icons a {
       flex: 1;
-      padding: .5rem 1.1rem; }
+      padding: .5rem 1.1rem;
+      font-size: .9rem;
+      padding: 1rem 2rem; }
+      .projects .item .item-content-wrapper .project-icons a:nth-of-type(1) {
+        margin-bottom: 0; }
   .boxes div {
     font-size: 1.8rem;
     padding: 1.5rem 2rem;
