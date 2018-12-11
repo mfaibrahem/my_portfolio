@@ -9,7 +9,9 @@
 * {
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   // @include background();
   color: $primary-color;
@@ -314,6 +316,19 @@ main {
     }
     
 
+    &.item-00 {
+      background-image: url("../assets/img/restaurant-img.png");
+      &::after {
+        // background-color: rgba(255, 174, 201, 0.4);
+        background-color: rgba(44, 44, 84, .7);
+        background-image: linear-gradient(to right, rgba(44, 44, 84, .7), rgba(0, 0, 0, 0));
+      }
+      a {
+        &:hover {
+          color: salmon;
+        }
+      }
+    }
     &.item-0 {
       background-image: url("../assets/img/storyBook-img.png");
       &::after {
