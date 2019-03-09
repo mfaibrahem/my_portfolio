@@ -9,9 +9,11 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   // @include background();
   color: $primary-color;
@@ -20,6 +22,7 @@ body {
   background-color: $primary-background-color;
   font-family: gothamLight, sans-serif;
 }
+
 ul {
   padding: 0;
   list-style-type: none;
@@ -27,9 +30,14 @@ ul {
 }
 
 // headings
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 200;
   margin: 0;
+
   &.sm-heading {
     max-width: max-content;
     margin-bottom: 2rem;
@@ -39,7 +47,7 @@ h1, h2, h3, h4, h5 {
 }
 
 a {
-  
+
   color: $primary-color;
   text-decoration: none;
 }
@@ -58,6 +66,7 @@ main {
 
   @include mainLogo;
   min-height: 100vh;
+
   .icons {
     display: flex;
     flex-wrap: wrap;
@@ -65,10 +74,12 @@ main {
     justify-content: flex-start;
     margin-top: 1rem;
     padding: 0 1rem;
+
     a {
       @include easeOut(1s);
       margin: 0;
       margin-right: 1.5rem;
+
       &:hover {
         color: $secondary-color;
         @include heartAnimation(1s);
@@ -76,6 +87,7 @@ main {
       }
     }
   }
+
   &#home {
     overflow: hidden;
 
@@ -94,17 +106,21 @@ main {
         display: block;
       }
     }
+
     .name {
       position: absolute;
     }
   }
+
   &#home,
   &#about,
   &#contact {
     padding: 1.5rem;
   }
+
   &#work {
     padding: 0;
+
     .main-logo-link {
       margin-left: 2rem;
       margin-top: 2rem;
@@ -117,6 +133,7 @@ main {
       padding: 1rem;
       color: cadetblue;
     }
+
     .canvas-overlay {
       position: absolute;
       top: 0;
@@ -134,11 +151,11 @@ main {
   // font-family: gothamLight, sans-serif;
   display: grid;
   grid-template-areas:
-  'bioimg'
-  'bio'
-  'job1'
-  'job2'
-  'job3';
+    'bioimg'
+    'bio'
+    'job1'
+    'job2'
+    'job3';
   grid-gap: 30px;
   grid-template-columns: 1fr;
 
@@ -155,43 +172,54 @@ main {
     border-radius: 50%;
     border: 3px solid cadetblue;
   }
+
   .bio {
     grid-area: bio;
     font-size: 1.2rem;
+
     h3 {
       color: cadetblue;
       border-bottom: 1px solid #f53b57;
       width: max-content;
     }
+
     ul {
       padding-left: 2rem;
       margin-top: 2rem;
       list-style-type: disc;
       color: #42a5f5;
+
       li {
         margin-bottom: .6rem;
       }
     }
   }
+
   .job-1 {
     grid-area: job1;
   }
-  .job-2, .job-3 {
+
+  .job-2,
+  .job-3 {
     ul {
       list-style-type: disc;
       padding-left: 2rem;
       color: silver;
+
       li {
         margin-bottom: .5rem;
       }
     }
   }
+
   .job-2 {
     grid-area: job2;
   }
+
   .job-3 {
     grid-area: job3;
   }
+
   .job {
     h3 {
       color: cadetblue;
@@ -203,6 +231,7 @@ main {
       margin-right: -1rem;
       margin-bottom: 1rem;
     }
+
     font-size: 1.1rem;
     background-color: lighten($primary-background-color, 5%);
     border-bottom: 5px solid cadetblue;
@@ -210,6 +239,7 @@ main {
     border-radius: 3px;
     box-shadow: 1px 2px 6px lighten($primary-background-color, 5%);
   }
+
   p {
     line-height: 1.6;
     font-weight: 200;
@@ -226,6 +256,7 @@ main {
   a {
     display: block;
   }
+
   img {
     width: 100%;
   }
@@ -259,7 +290,7 @@ main {
       text-transform: uppercase;
       color: #FFF;
       z-index: 2;
-      
+
       p {
         letter-spacing: 0;
         font-weight: 400;
@@ -271,6 +302,7 @@ main {
         font-size: .9rem;
         margin-bottom: 2rem;
       }
+
       .project-icons {
 
         a {
@@ -297,7 +329,7 @@ main {
               width: 100%;
               height: 100%;
               background-color: rgba(255, 255, 255, 0);
-              background-image: linear-gradient(to right,rgba(255,255,255,0) 25%,rgba(255, 255, 255, 0.6) 75%);
+              background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.6) 75%);
 
             }
           }
@@ -314,28 +346,99 @@ main {
       }
 
     }
-    
 
-    &.item-00 {
-      background-image: url("../assets/img/restaurant-img.png");
+
+
+    &.item-0-0 {
+      background-image: url("../assets/img/shuttle-img.png");
+
       &::after {
         // background-color: rgba(255, 174, 201, 0.4);
         background-color: rgba(44, 44, 84, .7);
         background-image: linear-gradient(to right, rgba(44, 44, 84, .7), rgba(0, 0, 0, 0));
       }
+
       a {
         &:hover {
           color: salmon;
         }
       }
     }
-    &.item-0 {
-      background-image: url("../assets/img/storyBook-img.png");
+
+    &.item-0-1 {
+      background-image: url("../assets/img/horizon-img.png");
+
       &::after {
         // background-color: rgba(255, 174, 201, 0.4);
         background-color: rgba(44, 44, 84, .7);
         background-image: linear-gradient(to right, rgba(44, 44, 84, .7), rgba(0, 0, 0, 0));
       }
+
+      a {
+        &:hover {
+          color: salmon;
+        }
+      }
+    }
+
+    &.item-0-2 {
+      background-image: url("../assets/img/misr-italy-img.png");
+
+      &::after {
+        // background-color: rgba(255, 174, 201, 0.4);
+        background-color: rgba(44, 44, 84, .7);
+        background-image: linear-gradient(to right, rgba(44, 44, 84, .7), rgba(0, 0, 0, 0));
+      }
+
+      a {
+        &:hover {
+          color: salmon;
+        }
+      }
+    }
+
+    &.item-0-3 {
+      background-image: url("../assets/img/almahmod-img.png");
+
+      &::after {
+        // background-color: rgba(255, 174, 201, 0.4);
+        background-color: rgba(44, 44, 84, .7);
+        background-image: linear-gradient(to right, rgba(44, 44, 84, .7), rgba(0, 0, 0, 0));
+      }
+
+      a {
+        &:hover {
+          color: salmon;
+        }
+      }
+    }
+
+
+    &.item-00 {
+      background-image: url("../assets/img/restaurant-img.png");
+
+      &::after {
+        // background-color: rgba(255, 174, 201, 0.4);
+        background-color: rgba(44, 44, 84, .7);
+        background-image: linear-gradient(to right, rgba(44, 44, 84, .7), rgba(0, 0, 0, 0));
+      }
+
+      a {
+        &:hover {
+          color: salmon;
+        }
+      }
+    }
+
+    &.item-0 {
+      background-image: url("../assets/img/storyBook-img.png");
+
+      &::after {
+        // background-color: rgba(255, 174, 201, 0.4);
+        background-color: rgba(44, 44, 84, .7);
+        background-image: linear-gradient(to right, rgba(44, 44, 84, .7), rgba(0, 0, 0, 0));
+      }
+
       a {
         &:hover {
           color: rgb(205, 97, 51);
@@ -345,10 +448,12 @@ main {
 
     &.item-1 {
       background-image: url("../assets/img/tourism-img.jpg");
+
       &::after {
-        background-color: rgba(22,36,60,.7);
-        background-image: linear-gradient(to right,rgba(22,36,60,.5),rgba(22,36,60,0));
+        background-color: rgba(22, 36, 60, .7);
+        background-image: linear-gradient(to right, rgba(22, 36, 60, .5), rgba(22, 36, 60, 0));
       }
+
       a {
         &:hover {
           color: rgb(22, 36, 60);
@@ -358,40 +463,49 @@ main {
 
     &.item-2 {
       background-image: url("../assets/img/star_shower.png");
+
       &::after {
-        background-color: rgba(80,9,75,.5);
-        background-image: linear-gradient(to right,rgba(80,9,75,.5),rgba(80,9,75,0));
+        background-color: rgba(80, 9, 75, .5);
+        background-image: linear-gradient(to right, rgba(80, 9, 75, .5), rgba(80, 9, 75, 0));
       }
+
       a {
         &:hover {
           color: rgb(80, 9, 75);
         }
       }
     }
+
     &.item-3 {
       background-image: url("../assets/img/task-list.png");
+
       &::after {
         background: rgba(97, 0, 58, 0.7);
         background-image: linear-gradient(to right, rgba(109, 33, 79, 0.7), transparent);
       }
+
       a {
         &:hover {
           color: rgb(97, 0, 58);
         }
       }
     }
+
     &.item-4 {
       background-image: url("../assets/img/tank-shooter.png");
+
       &::after {
         background-color: rgba(15, 202, 218, 0.49);
         background-image: linear-gradient(to right, rgba(15, 202, 218, 0.49), transparent);
       }
+
       .project-icons {
 
         a {
           color: #222;
           background-color: rgba(0, 0, 0, 0);
           border-color: #333;
+
           &:hover {
             color: rgb(15, 202, 218);
             background-color: #333;
@@ -405,24 +519,30 @@ main {
         }
       }
 
-      p, h4 {
+      p,
+      h4 {
         color: #222;
       }
     }
+
     &.item-5 {
       background-image: url("../assets/img/bouncing-circles.png");
+
       &::after {
         background-color: rgba(24, 44, 97, 0.78);
         background-image: linear-gradient(to right, rgba(24, 44, 97, 0.78), rgba(24, 44, 97, 0));
       }
+
       a {
         &:hover {
           color: rgb(24, 44, 97);
         }
       }
     }
+
     &.item-6 {
       background-image: url("../assets/img/bouncing-balls.png");
+
       &::after {
         background-color: rgba(183, 157, 2, 0.75);
         background-image: linear-gradient(to right, rgba(183, 157, 2, 0.9), transparent);
@@ -447,7 +567,9 @@ main {
           }
         }
       }
-      p, h4 {
+
+      p,
+      h4 {
         color: #222;
       }
     }
@@ -489,9 +611,10 @@ main {
       transform: scale(0);
       // @include easeOut(.3s);
     }
+
     &:hover {
       transform: scale(1.1);
-      
+
       &::after {
         background-color: darken($primary-background-color, 20%);
         opacity: .25;

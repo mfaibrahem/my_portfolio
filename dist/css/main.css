@@ -139,10 +139,18 @@ ul {
   list-style-type: none;
   margin: 0; }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 200;
   margin: 0; }
-  h1.sm-heading, h2.sm-heading, h3.sm-heading, h4.sm-heading, h5.sm-heading {
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading,
+  h4.sm-heading,
+  h5.sm-heading {
     max-width: max-content;
     margin-bottom: 2rem;
     padding: .2rem 1rem;
@@ -345,11 +353,13 @@ main {
         margin-bottom: .6rem; }
   .about-info .job-1 {
     grid-area: job1; }
-  .about-info .job-2 ul, .about-info .job-3 ul {
+  .about-info .job-2 ul,
+  .about-info .job-3 ul {
     list-style-type: disc;
     padding-left: 2rem;
     color: silver; }
-    .about-info .job-2 ul li, .about-info .job-3 ul li {
+    .about-info .job-2 ul li,
+    .about-info .job-3 ul li {
       margin-bottom: .5rem; }
   .about-info .job-2 {
     grid-area: job2; }
@@ -441,6 +451,34 @@ main {
           margin-right: .3rem; }
         .projects .item .item-content-wrapper .project-icons a:nth-of-type(1) {
           margin-bottom: 1rem; }
+    .projects .item.item-0-0 {
+      background-image: url("../assets/img/shuttle-img.png"); }
+      .projects .item.item-0-0::after {
+        background-color: rgba(44, 44, 84, 0.7);
+        background-image: linear-gradient(to right, rgba(44, 44, 84, 0.7), rgba(0, 0, 0, 0)); }
+      .projects .item.item-0-0 a:hover {
+        color: salmon; }
+    .projects .item.item-0-1 {
+      background-image: url("../assets/img/horizon-img.png"); }
+      .projects .item.item-0-1::after {
+        background-color: rgba(44, 44, 84, 0.7);
+        background-image: linear-gradient(to right, rgba(44, 44, 84, 0.7), rgba(0, 0, 0, 0)); }
+      .projects .item.item-0-1 a:hover {
+        color: salmon; }
+    .projects .item.item-0-2 {
+      background-image: url("../assets/img/misr-italy-img.png"); }
+      .projects .item.item-0-2::after {
+        background-color: rgba(44, 44, 84, 0.7);
+        background-image: linear-gradient(to right, rgba(44, 44, 84, 0.7), rgba(0, 0, 0, 0)); }
+      .projects .item.item-0-2 a:hover {
+        color: salmon; }
+    .projects .item.item-0-3 {
+      background-image: url("../assets/img/almahmod-img.png"); }
+      .projects .item.item-0-3::after {
+        background-color: rgba(44, 44, 84, 0.7);
+        background-image: linear-gradient(to right, rgba(44, 44, 84, 0.7), rgba(0, 0, 0, 0)); }
+      .projects .item.item-0-3 a:hover {
+        color: salmon; }
     .projects .item.item-00 {
       background-image: url("../assets/img/restaurant-img.png"); }
       .projects .item.item-00::after {
@@ -492,7 +530,8 @@ main {
           .projects .item.item-4 .project-icons a:hover::after {
             background-color: transparent;
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.6) 75%); }
-      .projects .item.item-4 p, .projects .item.item-4 h4 {
+      .projects .item.item-4 p,
+      .projects .item.item-4 h4 {
         color: #222; }
     .projects .item.item-5 {
       background-image: url("../assets/img/bouncing-circles.png"); }
@@ -517,7 +556,8 @@ main {
           .projects .item.item-6 .project-icons a:hover::after {
             background-color: transparent;
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.6) 75%); }
-      .projects .item.item-6 p, .projects .item.item-6 h4 {
+      .projects .item.item-6 p,
+      .projects .item.item-6 h4 {
         color: #222; }
 
 .boxes {
